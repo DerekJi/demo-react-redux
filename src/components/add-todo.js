@@ -1,20 +1,13 @@
 import React from 'react'
-import { addTodo } from '../actions'
 
-const AddTodo = ({ dispatch }) => {
+
+const AddTodo = ({ submit }) => {
   let input
 
   return (
     <div>
       <form
-        onSubmit={e => {
-          e.preventDefault()
-          if (!input.value.trim()) {
-            return
-          }
-          dispatch(addTodo(input.value))
-          input.value = ''
-        }}
+        onSubmit={(e) => submit(e, input)}
       >
         <input ref={node => (input = node)} />
         <button type="submit">Add Todo</button>
