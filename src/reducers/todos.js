@@ -1,3 +1,5 @@
+import { randomBoolean } from '../utils/common';
+
 const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
@@ -6,7 +8,7 @@ const todos = (state = [], action) => {
         {
           id: action.id,
           text: action.text,
-          completed: false
+          completed: randomBoolean()
         }
       ]
     case 'TOGGLE_TODO':
