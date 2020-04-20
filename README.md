@@ -3,4 +3,4 @@
 This branch `master` does nothing. It just provides a fresh react environment.
 
 Please visit the branches for details:
-* `official-tutorial`: https://github.com/DerekJi/demo-react-redux/tree/official-tutorial
+* `official-tutorial`: implements the basic example `Todo List` from the [official tutorial]( https://github.com/DerekJi/demo-react-redux/tree/official-tutorial)
