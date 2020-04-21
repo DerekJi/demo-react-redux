@@ -2,6 +2,8 @@ import React from 'react'
 import Footer from './components/footer';
 import AddTodo from './containers/add-todo';
 import VisibleTodoList from './containers/visible-todo-list';
+import React from 'react';
+import './App.scss';
 
 const App = () => (
   <div>
