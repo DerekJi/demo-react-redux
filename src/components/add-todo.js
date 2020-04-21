@@ -1,19 +1,17 @@
-import React from 'react'
+import React from 'react';
 
 
 const AddTodo = ({ submit }) => {
-  let input
+  let input;
 
   return (
     <div>
-      <form
-        onSubmit={(e) => submit(e, input)}
-      >
+      <form onSubmit={(e) => submit(e, input)}>
         <input ref={node => (input = node)} />
         <button type="submit">Add Todo</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default AddTodo;

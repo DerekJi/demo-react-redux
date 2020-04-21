@@ -1,15 +1,15 @@
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import AddTodo from '../components/add-todo';
 import { addTodo } from '../actions';
 
 const mapDispatchToProps = dispatch => ({
   submit: (e, input) => {
-    e.preventDefault()
+    e.preventDefault();
     if (!input.value.trim()) {
-      return
+      return;
     }
-    dispatch(addTodo(input.value))
-    input.value = ''
+    dispatch(addTodo(input.value));
+    input.value = '';
   }
 });
 
