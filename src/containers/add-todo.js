@@ -3,13 +3,13 @@ import AddTodo from '../components/add-todo';
 import { addTodo } from '../actions';
 
 const mapDispatchToProps = dispatch => ({
-  submit: (e, input) => {
+  submit: (e, value) => {
     e.preventDefault();
-    if (!input.value.trim()) {
+    if (!value.trim()) {
       return;
     }
-    dispatch(addTodo(input.value));
-    input.value = '';
+    dispatch(addTodo(value));
+    value = '';
   }
 });
 
