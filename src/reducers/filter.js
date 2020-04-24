@@ -1,7 +1,10 @@
 const initialFilterState = '';
 
 const filter = (state = initialFilterState, action) => {
-  return action.data.filterName;
+  if (action && action.data) {
+    return action.data.filterName;
+  }
+  return state;
 };
 
 export default filter;

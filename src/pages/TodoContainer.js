@@ -5,7 +5,13 @@ const Todo = ({ todos }) => {
   return (
     <div className="d-todos">
       Todo Container
-
+      <ul>
+      {
+        todos.map(todo => (
+          <li>{todo.name}</li>
+        ))
+      }
+      </ul>
     </div>
   );
 };
