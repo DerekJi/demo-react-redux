@@ -7,10 +7,7 @@ const filter = (state = initialFilterState, action) => {
     case FILTER_ALL:
     case FILTER_ACTIVE:
     case FILTER_COMPLETE:
-      if (action && action.data) {
-        return action.type;
-      }
-      return state;
+      return action.type;
     default:
       return state;
   }
