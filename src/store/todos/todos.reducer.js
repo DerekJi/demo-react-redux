@@ -15,7 +15,7 @@ const todos = (state = initialTodoState, action) => {
   switch (action.type) {
     case ADD_TODO:
       return [
-        ...state.todos,
+        ...state,
         action.data
       ];
 
