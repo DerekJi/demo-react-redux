@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO } from './action-types';
+import { ADD_TODO, TOGGLE_TODO } from './filter.action-types';
 
 let todoId = 1;
 

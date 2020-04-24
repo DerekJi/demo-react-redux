@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO } from "../store/action-types";
+import { ADD_TODO, TOGGLE_TODO } from "./todos.action-types";
 
 /**
  * Array<Todo>
