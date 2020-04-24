@@ -1,12 +1,9 @@
-import { FILTER } from './filter.action-types';
-
 /**
  * 
  * @param {string} filterName 
  */
-export const filter = (filterName) => {
+export const filter = (filterType) => {
   return {
-    type: FILTER,
-    data: { filterName }
+    type: filterType,
   };
 };

@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { addTodo } from '../store/todos/todos.actions';
 
 class AddTodo extends React.Component {
-  constructor({dispatch}) {
-    super({dispatch});
+  constructor(props) {
+    super(props);
 
     this.state = {value: ''};
   }
@@ -34,5 +35,9 @@ class AddTodo extends React.Component {
   }
 
 }
+
+AddTodo.propTypes = {
+  dispatch: PropTypes.func,
+};
 
 export default connect()(AddTodo);

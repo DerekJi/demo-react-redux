@@ -1,10 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const Filter = () => (
+import { filter as filterActionCreator } from '../store/filter/filter.actions';
+
+const Filter = ({filter}) => (
 <div className="d-panel d-filters">
-  Filters
+  <b>Filters</b>
+  <div>
+    <button onClick={() => filter('FILTER_ALL')}>ALL</button>
+    <button onClick={() => filter('FILTER_ACTIVE')}>Active</button>
+    <button onClick={() => filter('FILTER_COMPLETE')}>Complete</button>
+  </div>
 </div>
 );
 
-export default connect()(Filter);
+const mapDispatchToProps = {
+  filter: (actionType) => filterActionCreator(actionType)
+};
+
+export default connect(null, mapDispatchToProps)(Filter);

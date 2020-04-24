@@ -1,12 +1,14 @@
-import { FILTER } from './filter.action-types';
+import { FILTER_ALL, FILTER_ACTIVE, FILTER_COMPLETE } from './filter.action-types';
 
-const initialFilterState = '';
+const initialFilterState = FILTER_ALL;
 
 const filter = (state = initialFilterState, action) => {
   switch (action.type) {
-    case FILTER:
+    case FILTER_ALL:
+    case FILTER_ACTIVE:
+    case FILTER_COMPLETE:
       if (action && action.data) {
-        return action.data.filterName;
+        return action.type;
       }
       return state;
     default:
