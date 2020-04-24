@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.scss';
-import TodoContainer from './pages/TodoContainer';
+import AddTodo from './pages/AddTodoContainer';
+import TodoList from './pages/TodoContainer';
+import Filter from './pages/FilterContainer';
 
 function App() {
   return (
     <div className="App">
-      <TodoContainer />
+      <AddTodo />
+      <TodoList />
+      <Filter />
     </div>
   );
 }

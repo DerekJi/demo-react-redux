@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 
 const Todo = ({ todos }) => {
   return (
-    <div className="d-todos">
-      Todo Container
+    <div className="d-panel d-todos">
+      Todos List
       <ul>
       {
         todos.map(todo => (
