@@ -17,8 +17,11 @@ class AddTodo extends React.Component {
 
   onSubmit(e) {
     e.preventDefault();
-    this.props.dispatch(addTodo(this.state.value));
-    this.setState({value: ''});
+    const value = this.state.value.trim();
+    if (value) {
+      this.props.dispatch(addTodo(value));
+      this.setState({value: ''});
+    }
   }
 
   render() {

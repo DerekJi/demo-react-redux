@@ -6,14 +6,17 @@ const Todo = ({ todos }) => {
   let key = 0;
   return (
     <div className="d-panel d-todos">
-      Todos List
-      <ul>
-      {
-        todos.map(todo => (
-          <li key={key++}>{todo.name}</li>
-        ))
+      <b>Todos List</b>
+      { todos.length > 0
+        ? <ul>
+          {
+            todos.map(todo => (
+                <li key={key++}>{todo.name}</li>
+              ))
+          }
+          </ul>
+        : <div><i>NO DATA FOUND</i></div>
       }
-      </ul>
     </div>
   );
 };
