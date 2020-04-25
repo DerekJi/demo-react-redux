@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import AddTodo from './pages/AddTodoContainer';
 import TodoList from './pages/TodoContainer';
-import Filter from './pages/FilterContainer';
+import Filter from './pages/FilterPanel';
 
 function App() {
   return (
