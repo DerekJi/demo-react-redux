@@ -1,0 +1,31 @@
+ul {
+  padding: 0 0 0 8px;
+  list-style: none;
+}
+
+li {
+  .sp-id {
+    background-color: #2b5088;
+    display: inline-block;
+    width: 28px;
+    text-align: center;
+    margin-right: 4px;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  .sp-status {
+    display: inline-block;
+    width: 60px;
+    margin-left: 12px;
+    border-radius: 4px;
+    text-align: center;
+    color: blue
+  }
+
+  button {
+    margin-left: 4px;
+  }
+}
