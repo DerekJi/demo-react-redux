@@ -1,25 +1,23 @@
 import React from 'react';
+import TodosList from './TodosList';
 import { connect } from 'react-redux';
 import { FILTER_ALL, FILTER_ACTIVE, FILTER_COMPLETE } from '../store/filter/filter.action-types';
 
-const Todo = ({ todos }) => {
-  let key = 0;
-  return (
-    <div className="d-panel d-todos">
-      <b>Todos List</b>
-      { todos.length > 0
-        ? <ul>
-          {
-            todos.map(todo => (
-                <li key={key++}>{todo.name}</li>
-              ))
-          }
-          </ul>
-        : <div><i>NO DATA FOUND</i></div>
-      }
-    </div>
-  );
-};
+const TodoNotFound = () => (
+  <div>
+    <i>NO DATA FOUND</i>
+  </div>
+);
+
+const TodoPanel = ({ todos }) => (
+<div className="d-panel d-todos">
+  <b>Todos List</b>
+  { todos.length > 0
+    ? <TodosList todos={todos}/>
+    : <TodoNotFound />
+  }
+</div>
+);
 
 const mapStatesToProps = (states) => {
   return {
@@ -40,5 +38,4 @@ const visible = (todo, filter) => {
 }
 
 
-export default connect(mapStatesToProps, null)(Todo);
-
+export default connect(mapStatesToProps, null)(TodoPanel);
